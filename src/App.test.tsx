@@ -3,8 +3,8 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 
 // https://create-react-app.dev/docs/running-tests/#docsNav
-test('renders learn react link', () => {
+test('renders start page', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const element = screen.getByText(/Start page/i);
+  expect(element).toBeInTheDocument();
 });
