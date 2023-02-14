@@ -1,14 +1,17 @@
 import React from 'react';
 import './App.css';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import { Layout } from 'antd'
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path='/'     element = {<div>Start page</div>}/> 
-        <Route path='/test' element = {<div>test</div>}/>
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path='/' element={<div>Start page</div>} />
+          <Route path='/test' element={<div>test</div>} />
+        </Routes>
+      </Layout>
     </BrowserRouter>
   );
 }
