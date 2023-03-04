@@ -9,7 +9,8 @@ export type NavbarItemType = {
   
 const NavbarItem: React.FC<NavbarItemType> = (props) => {
     return (
-        <Link 
+        <Link
+            data-testid={props.route}
             className={css.navbarItem}
             to={props.route}
         >

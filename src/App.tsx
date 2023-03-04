@@ -4,6 +4,7 @@ import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import { Layout } from 'antd'
 import Navbar from './Components/Navbar/Navbar';
 import { routes } from './config';
+import SignInPage from './Components/SignInPage/SignInPage';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path={routes['startPage']} element={<div>Start page</div>} />
-          <Route path={routes['login']} element={<div>Sign In page</div>} />          
+          <Route path={routes['signin']} element={<SignInPage />} />          
         </Routes>
       </Layout>
     </BrowserRouter>

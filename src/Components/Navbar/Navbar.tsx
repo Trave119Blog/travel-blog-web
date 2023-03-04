@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
             />
             <NavbarItem 
                 content='Sign In'
-                route={routes['login']}
+                route={routes['signin']}
             />
         </Header>
     )

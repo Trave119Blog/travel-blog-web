@@ -1,6 +1,7 @@
 import React from 'react';
 import { act, render, screen } from '@testing-library/react';
 import App from './App';
+import { routes } from './config';
 
 // https://create-react-app.dev/docs/running-tests/#docsNav
 test('renders start page', () => {
@@ -16,7 +17,7 @@ test("navigate to sign in page when you click Sing In link and back to start pag
   );
 
   act(() => {
-    const goToLoginLink = screen.getByText("Sign In")
+    const goToLoginLink = screen.getByTestId(routes['signin'])
     goToLoginLink.dispatchEvent(new MouseEvent("click", { bubbles: true }))
   })
   // Checking existanse of Sign In page after clicking login link
@@ -27,7 +28,7 @@ test("navigate to sign in page when you click Sing In link and back to start pag
   expect(StartPageElement).toBeNull() // it doesn't exist
 
   act(() => {
-    const goToHomePageLink = screen.getByText("Home")
+    const goToHomePageLink = screen.getByTestId(routes['startPage'])
     goToHomePageLink.dispatchEvent(new MouseEvent("click", { bubbles: true }))
   })
 
